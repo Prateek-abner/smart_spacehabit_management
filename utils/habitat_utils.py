@@ -10,7 +10,7 @@ def simulate_sensor_data(num_astronauts, simulation_time):
     time = np.arange(0, simulation_time, 0.1)
     
     # Simulate oxygen levels
-    oxygen_level = 20 + np.sin(time) * 0.5  # Normal range: 19.5% to 20.5%
+    oxygen_level = np.clip(20 + np.sin(time) * 0.5  # Normal range: 19.5% to 20.5%
     
     # Simulate temperature
     temperature = 22 + np.cos(time) * 3  # Normal range: 19°C to 25°C
